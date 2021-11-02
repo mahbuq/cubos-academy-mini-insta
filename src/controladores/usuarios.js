@@ -39,8 +39,8 @@ async function obterPerfil(req, res) {
 }
 
 async function atualizarPerfil(req, res) {
-   const { nome, imagem, username, email, site, bio, telefone, genero, senha, verificado } =
-      req.body;
+   const { nome, imagem, username, email, site, bio, telefone, genero, verificado } = req.body;
+   let { senha } = req.body;
    const usuario = req.usuario;
 
    if (
